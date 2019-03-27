@@ -1,0 +1,46 @@
+.header {
+    background-color: $color-light-grey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include unitize(height, 80);
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    @include unitize(right, 80);
+}
+
+.logo img {
+    @include unitize(width, 120);
+    height: 100%;
+}
+
+.language-filter {
+    display: none;
+}
+
+.main {
+    @include unitize(padding-top, 80);
+}
+
+
+
+/******************* Tablet view *******************/
+@include media('>tablet', 'screen') {
+
+  /** Vars **/
+
+}
+
+/******************* Desktop view *******************/
+@include media('>desktop', 'screen') {
+
+  /** Vars **/
+
+
+
+}
