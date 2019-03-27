@@ -251,6 +251,7 @@
   padding-right: 1.25rem;
   padding-bottom: 10px;
   padding-bottom: 0.625rem;
+  text-align: center;
 }
 
 .footer .inner {
@@ -301,8 +302,8 @@
   width: 33%;
 }
 
-.footer .links .data {
-  text-align: center;
+.footer .links .impressum {
+  text-align: left;
 }
 
 .footer .links .agb {
@@ -340,6 +341,10 @@
 
 /******************* Tablet view *******************/
 @media screen and (min-width: 48rem) {
+  .footer {
+    text-align: left;
+  }
+
   .footer .title {
     font-size: 28px;
     font-size: 1.75rem;
