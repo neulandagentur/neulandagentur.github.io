@@ -62,6 +62,7 @@
 
 .footer .social img {
     @include unitize(width, 35);
+    @include unitize(padding-right, 10);
 }
 
 .footer .copyright {
@@ -106,8 +107,7 @@
 }
 
 .footer .social img {
-    @include unitize(width, 35);
-    @include unitize(padding-right, 10);
+    @include unitize(width, 45);
 }
 
 }

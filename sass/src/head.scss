@@ -19,11 +19,11 @@
 }
 
 .head .description {
-@include unitize(font-size, 20);
+    @include unitize(font-size, 20);
 }
 
 .head .title {
-@include unitize(font-size, 60);
+    @include unitize(font-size, 60);
 }
   /** Vars **/
 
@@ -33,10 +33,13 @@
 @include media('>desktop', 'screen') {
 
 .head .description {
-@include unitize(font-size, 24);
+    @include unitize(font-size, 24);
+    @include unitize(padding-bottom, 100);
 }
 .head .title {
-@include unitize(font-size, 100);
+    @include unitize(padding-top, 80);
+    @include unitize(font-size, 100);
+    @include unitize(padding-bottom, 40);
 }
 
 

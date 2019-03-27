@@ -89,8 +89,16 @@
 /******************* Desktop view *******************/
 @include media('>desktop', 'screen') {
 
+.project {
+    @include unitize(width, 400);
+}
+
 .project .title {
     @include unitize(font-size, 34);
+}
+
+.project .inner {
+    @include unitize(padding-bottom, 40);
 }
 
 }
