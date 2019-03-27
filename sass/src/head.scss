@@ -13,6 +13,11 @@
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
 
+.head {
+    @include unitize(padding-left, 10);
+    @include unitize(padding-right, 10);
+}
+
 .head .description {
 @include unitize(font-size, 20);
 }

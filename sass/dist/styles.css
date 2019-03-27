@@ -43,6 +43,20 @@
     height: 80px;
     height: 5rem;
   }
+
+  .logo img {
+    width: 150px;
+    width: 9.375rem;
+  }
+
+  .main {
+    padding-left: 10px;
+    padding-left: 0.625rem;
+    padding-right: 10px;
+    padding-right: 0.625rem;
+    padding-top: 80px;
+    padding-top: 5rem;
+  }
 }
 /******************* Desktop view *******************/
 @media screen and (min-width: 75rem) {
@@ -66,6 +80,13 @@
 
 /******************* Tablet view *******************/
 @media screen and (min-width: 48rem) {
+  .head {
+    padding-left: 10px;
+    padding-left: 0.625rem;
+    padding-right: 10px;
+    padding-right: 0.625rem;
+  }
+
   .head .description {
     font-size: 20px;
     font-size: 1.25rem;
@@ -174,6 +195,8 @@
   }
 
   .project .head {
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 40px;
     padding-bottom: 2.5rem;
   }
@@ -256,11 +279,18 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between;
+}
+
+.footer .links .subtitle {
+  width: 33%;
+}
+
+.footer .links .data {
+  text-align: center;
+}
+
+.footer .links .agb {
+  text-align: right;
 }
 
 .footer .company p,
@@ -282,7 +312,8 @@
 }
 
 .footer .social img {
-  width: 10%;
+  width: 35px;
+  width: 2.1875rem;
 }
 
 .footer .copyright {
@@ -290,6 +321,53 @@
 }
 
 /******************* Tablet view *******************/
+@media screen and (min-width: 48rem) {
+  .footer .title {
+    font-size: 28px;
+    font-size: 1.75rem;
+    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
+  }
+
+  .footer .subtitle {
+    font-size: 24px;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
+  }
+
+  .footer .contact {
+    width: 40%;
+  }
+
+  .footer .company p:last-of-type {
+    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
+  }
+
+  .footer .social {
+    width: 40%;
+  }
+
+  .footer .links {
+    width: 20%;
+    margin-top: 0;
+    display: block;
+  }
+
+  .footer .links .subtitle {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .footer .social img {
+    width: 35px;
+    width: 2.1875rem;
+    padding-right: 10px;
+    padding-right: 0.625rem;
+  }
+}
 /******************* Desktop view *******************/
 * {
   padding: 0;

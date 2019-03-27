@@ -30,7 +30,18 @@
     width: 100%;
     @include unitize(margin-top, 10);
     @include flexbox;
-    @include justify-content(space-between);
+}
+
+.footer .links .subtitle {
+    width: 33%;
+}
+
+.footer .links .data {
+    text-align: center;
+}
+
+.footer .links .agb {
+    text-align: right;
 }
 
 .footer .company p,
@@ -50,7 +61,7 @@
 }
 
 .footer .social img {
-    width: 10%;
+    @include unitize(width, 35);
 }
 
 .footer .copyright {
@@ -60,6 +71,44 @@
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
 
+.footer .title {
+    @include unitize(font-size, 28);
+    @include unitize(padding-bottom, 20);
+}
+
+.footer .subtitle {
+    @include unitize(font-size, 24);
+    @include unitize(padding-bottom, 20);
+}
+
+.footer .contact {
+    width: 40%;
+}
+
+.footer .company p:last-of-type {
+    @include unitize(padding-bottom, 20);
+}
+
+.footer .social {
+    width: 40%;
+}
+
+.footer .links {
+    width: 20%;
+    margin-top: 0;
+    display: block;
+}
+
+.footer .links .subtitle {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+}
+
+.footer .social img {
+    @include unitize(width, 35);
+    @include unitize(padding-right, 10);
+}
 
 }
 

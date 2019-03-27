@@ -63,6 +63,8 @@
 }
 
 .project .head {
+    padding-left: 0;
+    padding-right: 0;
     @include unitize(padding-bottom, 40);
 }
 

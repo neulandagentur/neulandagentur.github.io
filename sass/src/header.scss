@@ -38,6 +38,16 @@
     @include unitize(height, 80);
 }
 
+.logo img {
+    @include unitize(width, 150);
+}
+
+.main {
+    @include unitize(padding-left, 10);
+    @include unitize(padding-right, 10);
+    @include unitize(padding-top, 80);
+}
+
 }
 
 /******************* Desktop view *******************/
