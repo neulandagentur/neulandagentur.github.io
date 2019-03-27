@@ -53,8 +53,37 @@
 /******************* Desktop view *******************/
 @include media('>desktop', 'screen') {
 
-  /** Vars **/
+.logo {
+    position: relative;
+    left: 0;
+}
+.header {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    @include unitize(padding, 20);
+    @include unitize(padding-left, 80);
+    @include unitize(padding-top, 40);
+    @include unitize(width, 300);
+}
+.main {
+    margin: 0 auto;
+    @include unitize(width, 1180);
+}
+.language-filter {
+    @include bold();
+    color: $color-dark-grey;
+    @include unitize(font-size, 24);
+    display: block;
 
+}
 
+.language-filter li:first-child {
+    @include unitize(margin-top, 90);
+}
+
+.language-filter ul {
+    list-style-type: none;
+}
 
 }

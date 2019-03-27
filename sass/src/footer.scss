@@ -75,6 +75,7 @@
 
 .footer {
     text-align: left;
+    @include unitize(margin-top, 40);
 }
 
 .footer .title {
@@ -120,5 +121,10 @@
 /******************* Desktop view *******************/
 @include media('>desktop', 'screen') {
 
+.footer {
+    margin: 0 auto;
+    @include unitize(width, 1180);
+    @include unitize(margin-top, 100);
+}
 
 }

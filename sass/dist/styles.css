@@ -59,8 +59,48 @@
   }
 }
 /******************* Desktop view *******************/
-@media screen and (min-width: 75rem) {
-  /** Vars **/
+@media screen and (min-width: 111.5625rem) {
+  .logo {
+    position: relative;
+    left: 0;
+  }
+
+  .header {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    padding: 20px;
+    padding: 1.25rem;
+    padding-left: 80px;
+    padding-left: 5rem;
+    padding-top: 40px;
+    padding-top: 2.5rem;
+    width: 300px;
+    width: 18.75rem;
+  }
+
+  .main {
+    margin: 0 auto;
+    width: 1180px;
+    width: 73.75rem;
+  }
+
+  .language-filter {
+    font-family: "LinotypeUniversW01-Bold_723691";
+    color: #d8d8d8;
+    font-size: 24px;
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  .language-filter li:first-child {
+    margin-top: 90px;
+    margin-top: 5.625rem;
+  }
+
+  .language-filter ul {
+    list-style-type: none;
+  }
 }
 .head .description {
   font-family: "LinotypeUniversW01-Bold_723691";
@@ -100,7 +140,7 @@
   /** Vars **/
 }
 /******************* Desktop view *******************/
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 111.5625rem) {
   .head .description {
     font-size: 24px;
     font-size: 1.5rem;
@@ -139,20 +179,49 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
 }
 
 .project .head .stars,
 .project .head .forks,
 .project .head .license {
-  width: 33%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 
-.project .head .forks {
-  text-align: center;
+.project .head .stars::before,
+.project .head .forks::before,
+.project .head .license::before {
+  content: " ";
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  width: 1.25rem;
+  height: 20px;
+  height: 1.25rem;
+  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
-.project .head .license {
-  text-align: right;
+.project .head .stars::before {
+  background-image: url("../../assets/icons/ic_star.svg");
+}
+
+.project .head .forks::before {
+  background-image: url("../../assets/icons/ic-split-round.svg");
+}
+
+.project .head .license::before {
+  background-image: url("../../assets/icons/ic_copyright.svg");
 }
 
 .project .language {
@@ -175,6 +244,9 @@
 .project .link {
   text-decoration: none;
   color: #00b0b9;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /******************* Tablet view *******************/
@@ -228,10 +300,9 @@
   }
 }
 /******************* Desktop view *******************/
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 111.5625rem) {
   .project {
-    width: 400px;
-    width: 25rem;
+    width: 33.3333%;
   }
 
   .project .title {
@@ -343,6 +414,8 @@
 @media screen and (min-width: 48rem) {
   .footer {
     text-align: left;
+    margin-top: 40px;
+    margin-top: 2.5rem;
   }
 
   .footer .title {
@@ -390,6 +463,15 @@
   }
 }
 /******************* Desktop view *******************/
+@media screen and (min-width: 111.5625rem) {
+  .footer {
+    margin: 0 auto;
+    width: 1180px;
+    width: 73.75rem;
+    margin-top: 100px;
+    margin-top: 6.25rem;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -414,7 +496,7 @@ body {
   /** Vars **/
 }
 /******************* Desktop view *******************/
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 111.5625rem) {
   /** Vars **/
   body {
     font-size: 18px;

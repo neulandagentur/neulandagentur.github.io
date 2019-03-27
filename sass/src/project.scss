@@ -12,21 +12,37 @@
     color: $color-dark-grey;
     @include unitize(padding-bottom, 20);
     @include flexbox;
+    @include justify-content(space-between);
 }
 
 .project .head .stars,
 .project .head .forks,
 .project .head .license {
-    width: 33%;
+    @include flexbox;
 }
 
-.project .head .forks {
-    text-align: center;
+.project .head .stars::before,
+.project .head .forks::before,
+.project .head .license::before {
+    content: " ";
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include unitize(width, 20);
+    @include unitize(height, 20);
+    @include unitize(margin-right, 10);
+}
+.project .head .stars::before {
+    background-image: url('../../assets/icons/ic_star.svg');
+}
+.project .head .forks::before {
+    background-image: url('../../assets/icons/ic-split-round.svg');
+}
+.project .head .license::before {
+    background-image: url('../../assets/icons/ic_copyright.svg');
 }
 
-.project .head .license {
-    text-align: right;
-}
 
 .project .language {
     @include unitize(padding-bottom, 10);
@@ -44,6 +60,9 @@
 .project .link {
     text-decoration: none;
     color: $color-blue;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /******************* Tablet view *******************/
@@ -90,7 +109,7 @@
 @include media('>desktop', 'screen') {
 
 .project {
-    @include unitize(width, 400);
+    width: 33.3333%;
 }
 
 .project .title {
