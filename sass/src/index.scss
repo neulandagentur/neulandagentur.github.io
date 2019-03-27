@@ -6,9 +6,20 @@
 @import 'fonts';
 @import 'colors';
 @import 'header';
+@import 'head';
+@import 'project';
+@import 'footer';
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
-    @include bold();
+    background-color: $color-light-grey;
+    color: $color-black;
+    @include unitize(font-size, 14);
+    @include condensed();
 }
 
 
@@ -16,6 +27,9 @@ body {
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
 
+body {
+    @include unitize(font-size, 16);
+}
   /** Vars **/
 
 }
@@ -24,6 +38,9 @@ body {
 @include media('>desktop', 'screen') {
 
   /** Vars **/
+  body {
+      @include unitize(font-size, 18);
+  }
 
 
 

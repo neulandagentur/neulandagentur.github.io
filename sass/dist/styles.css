@@ -4,8 +4,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  height: 5rem;
+  height: 60px;
+  height: 3.75rem;
 }
 
 .logo {
@@ -14,8 +14,8 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 80px;
-  right: 5rem;
+  left: 20px;
+  left: 1.25rem;
 }
 
 .logo img {
@@ -29,29 +29,298 @@
 }
 
 .main {
-  padding-top: 80px;
-  padding-top: 5rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+  padding-top: 60px;
+  padding-top: 3.75rem;
 }
 
 /******************* Tablet view *******************/
 @media screen and (min-width: 48rem) {
-  /** Vars **/
+  .header {
+    height: 80px;
+    height: 5rem;
+  }
 }
 /******************* Desktop view *******************/
 @media screen and (min-width: 75rem) {
   /** Vars **/
 }
-body {
+.head .description {
   font-family: "LinotypeUniversW01-Bold_723691";
+  font-size: 16px;
+  font-size: 1rem;
+  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
+}
+
+.head .title {
+  font-family: "LinotypeUniversW01-Bold_723691";
+  font-size: 30px;
+  font-size: 1.875rem;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 /******************* Tablet view *******************/
 @media screen and (min-width: 48rem) {
+  .head .description {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  .head .title {
+    font-size: 60px;
+    font-size: 3.75rem;
+  }
+
+  /** Vars **/
+}
+/******************* Desktop view *******************/
+@media screen and (min-width: 75rem) {
+  .head .description {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+
+  .head .title {
+    font-size: 100px;
+    font-size: 6.25rem;
+  }
+}
+.project {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.project .inner {
+  padding: 20px 20px;
+  padding: 1.25rem 1.25rem;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+}
+
+.project .head {
+  color: #d8d8d8;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.project .head .stars,
+.project .head .forks,
+.project .head .license {
+  width: 33%;
+}
+
+.project .head .forks {
+  text-align: center;
+}
+
+.project .head .license {
+  text-align: right;
+}
+
+.project .language {
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+}
+
+.project .title {
+  font-size: 26px;
+  font-size: 1.625rem;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
+}
+
+.project .description {
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
+}
+
+.project .link {
+  text-decoration: none;
+  color: #00b0b9;
+}
+
+/******************* Tablet view *******************/
+@media screen and (min-width: 48rem) {
+  .projects {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .project {
+    border-style: solid;
+    border-color: transparent;
+    width: 50%;
+    margin-bottom: 0;
+    border-width: 10px;
+    border-width: 0.625rem;
+  }
+
+  .project .head {
+    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
+  }
+
+  .project .inner {
+    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
+  }
+
+  .project .title {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+
+  .project .language {
+    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
+  }
+
+  .project .description {
+    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
+  }
+}
+/******************* Desktop view *******************/
+@media screen and (min-width: 75rem) {
+  .project .title {
+    font-size: 34px;
+    font-size: 2.125rem;
+  }
+}
+.footer {
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+}
+
+.footer .inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.footer .title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-family: "LinotypeUniversW01-Bold_723691";
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+}
+
+.footer .subtitle {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "LinotypeUniversW01-Bold_723691";
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+}
+
+.footer .contact,
+.footer .social {
+  width: 100%;
+}
+
+.footer .links {
+  width: 100%;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+
+.footer .company p,
+.footer .company a {
+  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
+}
+
+.footer .company a {
+  color: #3d4548;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer .company:last-child,
+.footer .company p:last-of-type {
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+}
+
+.footer .social img {
+  width: 10%;
+}
+
+.footer .copyright {
+  text-align: center;
+}
+
+/******************* Tablet view *******************/
+/******************* Desktop view *******************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #3d4548;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "LinotypeUniversW02-Cn";
+}
+
+/******************* Tablet view *******************/
+@media screen and (min-width: 48rem) {
+  body {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
   /** Vars **/
 }
 /******************* Desktop view *******************/
 @media screen and (min-width: 75rem) {
   /** Vars **/
+  body {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

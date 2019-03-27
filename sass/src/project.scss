@@ -1,0 +1,94 @@
+.project {
+    width: 100%;
+    @include unitize(margin-bottom, 20);
+}
+.project .inner {
+    @include unitize(padding, 20 20);
+    background-color: $color-white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+}
+
+.project .head {
+    color: $color-dark-grey;
+    @include unitize(padding-bottom, 20);
+    @include flexbox;
+}
+
+.project .head .stars,
+.project .head .forks,
+.project .head .license {
+    width: 33%;
+}
+
+.project .head .forks {
+    text-align: center;
+}
+
+.project .head .license {
+    text-align: right;
+}
+
+.project .language {
+    @include unitize(padding-bottom, 10);
+}
+
+.project .title {
+    @include unitize(font-size, 26);
+    @include unitize(padding-bottom, 20);
+}
+
+.project .description {
+    @include unitize(padding-bottom, 20);
+}
+
+.project .link {
+    text-decoration: none;
+    color: $color-blue;
+}
+
+/******************* Tablet view *******************/
+@include media('>tablet', 'screen') {
+
+.projects {
+    @include flexbox;
+    @include flex-wrap(wrap);
+}
+
+.project {
+    border-style: solid;
+    border-color: transparent;
+    width: 50%;
+    margin-bottom: 0;
+    @include unitize(border-width, 10);
+}
+
+.project .head {
+    @include unitize(padding-bottom, 40);
+}
+
+.project .inner {
+    @include unitize(padding, 20 40);
+}
+
+.project .title {
+    @include unitize(font-size, 30);
+}
+
+.project .language {
+    @include unitize(padding-bottom, 20);
+}
+
+.project .description {
+    @include unitize(padding-bottom, 40);
+}
+
+}
+
+/******************* Desktop view *******************/
+@include media('>desktop', 'screen') {
+
+.project .title {
+    @include unitize(font-size, 34);
+}
+
+}

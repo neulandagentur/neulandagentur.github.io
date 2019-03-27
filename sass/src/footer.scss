@@ -1,0 +1,70 @@
+.footer {
+    @include unitize(padding-left, 20);
+    @include unitize(padding-right, 20);
+    @include unitize(padding-bottom, 10);
+}
+
+.footer .inner {
+    @include flexbox;
+    @include flex-wrap(wrap);
+}
+
+.footer .title {
+    @include unitize(font-size, 24);
+    @include bold();
+    @include unitize(padding-bottom, 10);
+}
+
+.footer .subtitle {
+    @include unitize(font-size, 20);
+    @include bold();
+    @include unitize(padding-bottom, 10);
+}
+
+.footer .contact,
+.footer .social {
+    width: 100%;
+}
+
+.footer .links {
+    width: 100%;
+    @include unitize(margin-top, 10);
+    @include flexbox;
+    @include justify-content(space-between);
+}
+
+.footer .company p,
+.footer .company a {
+    @include unitize(padding-bottom, 5);
+}
+
+.footer .company a {
+    color: $color-black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer .company:last-child,
+.footer .company p:last-of-type {
+    @include unitize(padding-bottom, 10);
+}
+
+.footer .social img {
+    width: 10%;
+}
+
+.footer .copyright {
+    text-align: center;
+}
+
+/******************* Tablet view *******************/
+@include media('>tablet', 'screen') {
+
+
+}
+
+/******************* Desktop view *******************/
+@include media('>desktop', 'screen') {
+
+
+}

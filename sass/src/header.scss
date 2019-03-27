@@ -4,14 +4,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    @include unitize(height, 80);
+    @include unitize(height, 60);
 }
 
 .logo {
     position: absolute;
     top: 50%;
     @include transform(translateY(-50%));
-    @include unitize(right, 80);
+    @include unitize(left, 20);
 }
 
 .logo img {
@@ -24,7 +24,9 @@
 }
 
 .main {
-    @include unitize(padding-top, 80);
+    @include unitize(padding-left, 20);
+    @include unitize(padding-right, 20);
+    @include unitize(padding-top, 60);
 }
 
 
@@ -32,7 +34,9 @@
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
 
-  /** Vars **/
+.header {
+    @include unitize(height, 80);
+}
 
 }
 

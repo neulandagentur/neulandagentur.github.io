@@ -1,2 +1,39 @@
-.head {
+.head .description {
+    @include bold();
+    @include unitize(font-size, 16);
+    @include unitize(padding-bottom, 40);
+}
+.head .title {
+    @include bold();
+    @include unitize(font-size, 30);
+    @include unitize(padding-bottom, 20);
+}
+
+
+/******************* Tablet view *******************/
+@include media('>tablet', 'screen') {
+
+.head .description {
+@include unitize(font-size, 20);
+}
+
+.head .title {
+@include unitize(font-size, 60);
+}
+  /** Vars **/
+
+}
+
+/******************* Desktop view *******************/
+@include media('>desktop', 'screen') {
+
+.head .description {
+@include unitize(font-size, 24);
+}
+.head .title {
+@include unitize(font-size, 100);
+}
+
+
+
 }
