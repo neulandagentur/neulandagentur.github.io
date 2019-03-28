@@ -1,8 +1,8 @@
 .footer {
+    text-align: center;
     @include unitize(padding-left, 20);
     @include unitize(padding-right, 20);
     @include unitize(padding-bottom, 10);
-    text-align: center;
 }
 
 .footer .inner {
@@ -11,14 +11,14 @@
 }
 
 .footer .title {
-    @include unitize(font-size, 24);
     @include bold();
+    @include unitize(font-size, 24);
     @include unitize(padding-bottom, 10);
 }
 
 .footer .subtitle {
-    @include unitize(font-size, 20);
     @include bold();
+    @include unitize(font-size, 20);
     @include unitize(padding-bottom, 10);
 }
 

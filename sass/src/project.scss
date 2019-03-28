@@ -2,10 +2,11 @@
     width: 100%;
     @include unitize(margin-bottom, 20);
 }
+
 .project .inner {
-    @include unitize(padding, 20 20);
     background-color: $color-white;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+    @include unitize(padding, 20 20);
 }
 
 .project .head {
@@ -33,16 +34,18 @@
     @include unitize(height, 20);
     @include unitize(margin-right, 10);
 }
+
 .project .head .stars::before {
     background-image: url('../../assets/icons/ic_star.svg');
 }
+
 .project .head .forks::before {
     background-image: url('../../assets/icons/ic-split-round.svg');
 }
+
 .project .head .license::before {
     background-image: url('../../assets/icons/ic_copyright.svg');
 }
-
 
 .project .language {
     @include unitize(padding-bottom, 10);
@@ -102,7 +105,6 @@
 .project .description {
     @include unitize(padding-bottom, 40);
 }
-
 }
 
 /******************* Desktop view *******************/
@@ -119,5 +121,4 @@
 .project .inner {
     @include unitize(padding-bottom, 40);
 }
-
 }

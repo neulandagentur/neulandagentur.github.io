@@ -15,14 +15,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: $color-light-grey;
     color: $color-black;
     @include unitize(font-size, 14);
     @include condensed();
 }
-
-
 
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
@@ -38,9 +37,9 @@ body {
 @include media('>desktop', 'screen') {
 
   /** Vars **/
-  body {
-      @include unitize(font-size, 18);
-  }
+body {
+  @include unitize(font-size, 18);
+}
 
 
 

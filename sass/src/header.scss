@@ -15,8 +15,8 @@
 }
 
 .logo img {
-    @include unitize(width, 120);
     height: 100%;
+    @include unitize(width, 120);
 }
 
 .language-filter {
@@ -28,8 +28,6 @@
     @include unitize(padding-right, 20);
     @include unitize(padding-top, 60);
 }
-
-
 
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
@@ -47,7 +45,6 @@
     @include unitize(padding-right, 10);
     @include unitize(padding-top, 80);
 }
-
 }
 
 /******************* Desktop view *******************/
@@ -57,6 +54,7 @@
     position: relative;
     left: 0;
 }
+
 .header {
     position: fixed;
     left: 0;
@@ -66,24 +64,25 @@
     @include unitize(padding-top, 40);
     @include unitize(width, 300);
 }
+
 .main {
     margin: 0 auto;
     @include unitize(width, 1180);
 }
-.language-filter {
-    @include bold();
-    color: $color-dark-grey;
-    @include unitize(font-size, 24);
-    display: block;
 
+.language-filter {
+    display: block;
+    color: $color-dark-grey;
+    @include bold();
+    @include unitize(font-size, 24);
+    @include unitize(margin-top, 90);
 }
 
-.language-filter li:first-child {
-    @include unitize(margin-top, 90);
+.language-filter li {
+    @include unitize(padding-bottom, 20);
 }
 
 .language-filter ul {
     list-style-type: none;
 }
-
 }

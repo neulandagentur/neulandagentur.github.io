@@ -19,9 +19,9 @@
 }
 
 .logo img {
+  height: 100%;
   width: 120px;
   width: 7.5rem;
-  height: 100%;
 }
 
 .language-filter {
@@ -86,16 +86,18 @@
   }
 
   .language-filter {
-    font-family: "LinotypeUniversW01-Bold_723691";
+    display: block;
     color: #d8d8d8;
+    font-family: "LinotypeUniversW01-Bold_723691";
     font-size: 24px;
     font-size: 1.5rem;
-    display: block;
-  }
-
-  .language-filter li:first-child {
     margin-top: 90px;
     margin-top: 5.625rem;
+  }
+
+  .language-filter li {
+    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
   }
 
   .language-filter ul {
@@ -136,8 +138,6 @@
     font-size: 60px;
     font-size: 3.75rem;
   }
-
-  /** Vars **/
 }
 /******************* Desktop view *******************/
 @media screen and (min-width: 111.5625rem) {
@@ -164,10 +164,10 @@
 }
 
 .project .inner {
-  padding: 20px 20px;
-  padding: 1.25rem 1.25rem;
   background-color: white;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+  padding: 20px 20px;
+  padding: 1.25rem 1.25rem;
 }
 
 .project .head {
@@ -316,13 +316,13 @@
   }
 }
 .footer {
+  text-align: center;
   padding-left: 20px;
   padding-left: 1.25rem;
   padding-right: 20px;
   padding-right: 1.25rem;
   padding-bottom: 10px;
   padding-bottom: 0.625rem;
-  text-align: center;
 }
 
 .footer .inner {
@@ -338,17 +338,17 @@
 }
 
 .footer .title {
+  font-family: "LinotypeUniversW01-Bold_723691";
   font-size: 24px;
   font-size: 1.5rem;
-  font-family: "LinotypeUniversW01-Bold_723691";
   padding-bottom: 10px;
   padding-bottom: 0.625rem;
 }
 
 .footer .subtitle {
+  font-family: "LinotypeUniversW01-Bold_723691";
   font-size: 20px;
   font-size: 1.25rem;
-  font-family: "LinotypeUniversW01-Bold_723691";
   padding-bottom: 10px;
   padding-bottom: 0.625rem;
 }

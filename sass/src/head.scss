@@ -3,12 +3,12 @@
     @include unitize(font-size, 16);
     @include unitize(padding-bottom, 40);
 }
+
 .head .title {
     @include bold();
     @include unitize(font-size, 30);
     @include unitize(padding-bottom, 20);
 }
-
 
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
@@ -25,8 +25,6 @@
 .head .title {
     @include unitize(font-size, 60);
 }
-  /** Vars **/
-
 }
 
 /******************* Desktop view *******************/
@@ -36,12 +34,10 @@
     @include unitize(font-size, 24);
     @include unitize(padding-bottom, 100);
 }
+
 .head .title {
     @include unitize(padding-top, 80);
     @include unitize(font-size, 100);
     @include unitize(padding-bottom, 40);
 }
-
-
-
 }
