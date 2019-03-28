@@ -4,6 +4,7 @@ export class Repos {
   constructor() {
     this.template = null;
     this.getRepos();
+    console.log('sdf');
   }
 
   getRepos() {
