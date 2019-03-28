@@ -3,11 +3,12 @@ import h from './h';
 export class Repos {
   constructor() {
     this.template = null;
-    this.getRepos();
     this.languages = [];
+    //this.getRepos(this.createFilter());
+    this.createFilter();
   }
 
-  getRepos() {
+  getRepos(callback) {
     const request = new XMLHttpRequest();
     this.request = request;
     this.request.open('GET', 'https://api.github.com/users/neulandagentur/repos');
@@ -36,6 +37,7 @@ export class Repos {
       } else console.log('error');
     });
     this.request.send();
+    if(callback) callback();
   }
 
   render(repository = {}) {
@@ -43,11 +45,39 @@ export class Repos {
     document.querySelector('.projects').appendChild(template);
   }
 
+  createFilter() {
+    this.languages.push('Javascript');
+    this.languages.push('CSS');
+    this.languages.push('no language');
+    const template = h('ul', { class: 'filter-list' });
+    document.querySelector('.language-filter').appendChild(template);
+    console.log(this.languages);
+    this.createListItems();
+  }
+
+  addListener() {
+    const items = document.querySelectorAll('.filter-item');
+    items.forEach((language) => {
+      language.addEventListener('click', () => {
+        if (language.innerHTML)
+        console.log(language.innerHTML);
+      })
+    })
+  }
+
+  createListItems() {
+    this.languages.forEach((language) => {
+      const listItem = h('li', { class: 'filter-item' }, [language]);
+      document.querySelector('.filter-list').appendChild(listItem);
+    });
+    this.addListener();
+  }
+
   createTemplate(repository = {}) {
     const language = repository.language || 'no language';
 
     if (this.languages.indexOf(language) < 0) {
-      this.languages.push(language.toLowerCase());
+      this.languages.push(language);
     }
 
     const license = repository.license
