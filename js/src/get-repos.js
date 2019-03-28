@@ -44,11 +44,10 @@ export class Repos {
   }
 
   createTemplate(repository = {}) {
-    let language = repository.language || 'no language';
-    let license = null;
-    if (repository.license) {
-      license = h('div', { class: 'license' }, [repository.license.toString()]);
-    }
+    const language = repository.language || 'no language';
+    const license = repository
+      ? h('div', { class: 'license' }, [repository.license.toString()])
+      : null;
     this.template = h('div', { class: 'project' }, [
       h('div', { class: 'inner' }, [
         h('div', { class: 'head' }, [
