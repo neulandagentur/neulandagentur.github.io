@@ -1,3 +1,3 @@
 import { Repos } from './get-repos';
 
-window.Repos = Repos;
+new Repos();
