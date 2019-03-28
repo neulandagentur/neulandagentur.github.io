@@ -4,7 +4,7 @@ export class Repos {
   constructor() {
     this.template = null;
     this.getRepos();
-    console.log('sdf');
+    this.languages = [];
   }
 
   getRepos() {
@@ -45,8 +45,13 @@ export class Repos {
 
   createTemplate(repository = {}) {
     const language = repository.language || 'no language';
-    const license = repository
-      ? h('div', { class: 'license' }, [repository.license.toString()])
+
+    if (this.languages.indexOf(language) < 0) {
+      this.languages.push(language.toLowerCase());
+    }
+
+    const license = repository.license
+      ? h('div', { class: 'license', 'data-language': language.toLowerCase()}, [repository.license.toString()])
       : null;
     this.template = h('div', { class: 'project' }, [
       h('div', { class: 'inner' }, [
