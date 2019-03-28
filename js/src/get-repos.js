@@ -44,11 +44,8 @@ export class Repos {
   }
 
   createTemplate(repository = {}) {
-    let language = 'no language';
+    let language = repository.language || 'no language';
     let license = null;
-    if (repository.language) {
-      language = repository.language;
-    }
     if (repository.license) {
       license = h('div', { class: 'license' }, [repository.license.toString()]);
     }
