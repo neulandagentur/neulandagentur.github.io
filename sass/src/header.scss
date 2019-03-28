@@ -79,6 +79,7 @@
 }
 
 .language-filter li {
+    cursor: pointer;
     @include unitize(padding-bottom, 20);
 }
 

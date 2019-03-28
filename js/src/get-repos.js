@@ -4,7 +4,6 @@ export class Repos {
   constructor() {
     this.template = null;
     this.languages = [];
-    //this.getRepos(this.createFilter());
     this.createFilter();
   }
 
@@ -51,16 +50,30 @@ export class Repos {
     this.languages.push('no language');
     const template = h('ul', { class: 'filter-list' });
     document.querySelector('.language-filter').appendChild(template);
-    console.log(this.languages);
     this.createListItems();
   }
 
   addListener() {
     const items = document.querySelectorAll('.filter-item');
-    items.forEach((language) => {
-      language.addEventListener('click', () => {
-        if (language.innerHTML)
-        console.log(language.innerHTML);
+    items.forEach((listLanguage) => {
+      listLanguage.addEventListener('click', () => {
+        if (listLanguage.classList.contains('is--active')) {
+          const projects = document.querySelectorAll('.project')
+          projects.forEach((project) => {
+            project.style.display = 'block';
+            listLanguage.classList.toggle('is--active');
+          })
+        } else {
+          const projectLanguages = document.querySelectorAll('[data-language]');
+          projectLanguages.forEach((projectLanguage) => {
+            if (projectLanguage.innerHTML !== listLanguage.innerHTML) {
+              projectLanguage.parentNode.parentNode.style.display = 'none';
+            } else {
+              projectLanguage.parentNode.parentNode.style.display = 'block';
+            }
+          })
+          listLanguage.classList.toggle('is--active');
+        }
       })
     })
   }
@@ -81,7 +94,7 @@ export class Repos {
     }
 
     const license = repository.license
-      ? h('div', { class: 'license', 'data-language': language.toLowerCase()}, [repository.license.toString()])
+      ? h('div', { class: 'license'}, [repository.license.toString()])
       : null;
     this.template = h('div', { class: 'project' }, [
       h('div', { class: 'inner' }, [
@@ -90,7 +103,7 @@ export class Repos {
           h('div', { class: 'forks' }, [repository.forks.toString()]),
           license,
         ]),
-        h('div', { class: 'language' }, [language]),
+        h('div', { class: 'language', 'data-language': language.toLowerCase() }, [language]),
         h('h3', { class: 'title' }, [repository.title]),
         h('p', { class: 'description' }, [repository.description]),
         h('a', { class: 'link', href: repository.url }, [repository.url.toString()]),
