@@ -5,6 +5,7 @@
 
 .project .inner {
     background-color: $color-white;
+    height: 100%;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
     @include unitize(padding, 20 20);
 }
@@ -52,6 +53,9 @@
 }
 
 .project .title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
     @include unitize(font-size, 26);
     @include unitize(padding-bottom, 20);
 }
@@ -66,6 +70,7 @@
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
+    @include unitize(height, 21);
 }
 
 /******************* Tablet view *******************/
