@@ -86,4 +86,8 @@
 .language-filter ul {
     list-style-type: none;
 }
+
+.language-filter .is--active {
+  color: rgb(180, 180, 180);
+}
 }

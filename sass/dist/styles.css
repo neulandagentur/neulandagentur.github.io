@@ -104,6 +104,10 @@
   .language-filter ul {
     list-style-type: none;
   }
+
+  .language-filter .is--active {
+    color: #b4b4b4;
+  }
 }
 .head .description {
   font-family: "LinotypeUniversW01-Bold_723691";
@@ -416,7 +420,12 @@
   padding-bottom: 0.625rem;
 }
 
+.footer .social a {
+  color: transparent;
+}
+
 .footer .social img {
+  border: 0;
   width: 35px;
   width: 2.1875rem;
   padding-right: 10px;

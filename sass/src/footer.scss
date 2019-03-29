@@ -61,7 +61,12 @@
     @include unitize(padding-bottom, 10);
 }
 
+.footer .social a {
+  color: transparent;
+}
+
 .footer .social img {
+    border: 0;
     @include unitize(width, 35);
     @include unitize(padding-right, 10);
 }
