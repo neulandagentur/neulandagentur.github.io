@@ -4,7 +4,7 @@ export class Repos {
   constructor() {
     this.template = null;
     this.languages = [];
-    this.createFilter();
+    this.getRepos(this.createFilter());
   }
 
   getRepos(callback) {
@@ -45,9 +45,6 @@ export class Repos {
   }
 
   createFilter() {
-    this.languages.push('Javascript');
-    this.languages.push('CSS');
-    this.languages.push('no language');
     const template = h('ul', { class: 'filter-list' });
     document.querySelector('.language-filter').appendChild(template);
     this.createListItems();
@@ -79,6 +76,7 @@ export class Repos {
   }
 
   createListItems() {
+    console.log(this.languages);
     this.languages.forEach((language) => {
       const listItem = h('li', { class: 'filter-item' }, [language]);
       document.querySelector('.filter-list').appendChild(listItem);
