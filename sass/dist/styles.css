@@ -392,6 +392,8 @@
 
 .footer .links .subtitle {
   width: 33%;
+  text-decoration: none;
+  color: #3d4548;
 }
 
 .footer .links .impressum {
