@@ -29,7 +29,7 @@ export default class Repository {
         h('div', { class: 'language', 'data-language': language.toLowerCase() }, [language]),
         h('h3', { class: 'title' }, [this.title]),
         h('p', { class: 'description' }, [this.description]),
-        h('a', { class: 'link', href: this.url }, [this.url]),
+        h('a', { class: 'link', target: "_blank", href: this.url }, [this.url]),
       ])
     ]);
   }

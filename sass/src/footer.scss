@@ -122,7 +122,6 @@
 .footer .social img {
     @include unitize(width, 45);
 }
-
 }
 
 /******************* Desktop view *******************/
@@ -133,5 +132,4 @@
     @include unitize(width, 1180);
     @include unitize(margin-top, 100);
 }
-
 }
